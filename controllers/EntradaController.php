@@ -1,10 +1,10 @@
 <?php
-    require_once 'Entrada.php';
+    require_once __DIR__ . '/../model/Entrada.php';
 
     class EntradaController {
 
         public function getAllEntradas(){
-            $entradas = glob('*.json');
+            $entradas = glob(__DIR__ . '/../data/*.json');
             $entradasObj = [];
             foreach ($entradas as $archivo) {
                 $entradasObj[basename($archivo, '.json')] = Entrada::find($archivo);
@@ -13,7 +13,7 @@
         }
 
         public function getEntrada($archivo){
-            return Entrada::find($archivo . '.json');
+            return Entrada::find(__DIR__ . '/../data/' . $archivo . '.json');
         }
 
         public function guardarEntrada($titulo, $contenido) {
@@ -23,16 +23,16 @@
 
         public function mostrarEntradas() {
             $entradasObj = $this->getAllEntradas();
-            require 'listado.php';
+            require __DIR__ . '/../views/listado.php';
         }
 
         public function mostrarEntrada($id) {
             $entrada = $this->getEntrada($id);
-            require 'entrada.php';
+            require __DIR__ . '/../views/entrada.php';
         }
 
         public function crearEntrada() {
-            require 'crear_entrada.php';
+            require __DIR__ . '/../views/crear_entrada.php';
         }
     }
 ?>
