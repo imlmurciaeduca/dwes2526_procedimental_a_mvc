@@ -13,6 +13,7 @@
     <title>Blog</title>
 </head>
 <body>
+    <p><a href="crear_entrada.php">Crear nueva entrada</a></p>
     <h1><?= $entrada1->getTitulo() ?></h1>
     <a href="entrada.php?id=entrada01">Leer</a>
     <h1><?= $entrada2->getTitulo() ?></h1>
