@@ -1,7 +1,8 @@
 <?php
     require_once 'Entrada.php';
 
-    $entrada = Entrada::find('entrada01.json');
+    $entrada1 = Entrada::find('entrada01.json');
+    $entrada2 = Entrada::find('entrada02.json');
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +13,9 @@
     <title>Blog</title>
 </head>
 <body>
-    <h1><?= $entrada->getTitulo() ?></h1>
-    <p><?= $entrada->getContenido() ?></p>
+    <h1><?= $entrada1->getTitulo() ?></h1>
+    <a href="entrada.php?id=entrada01">Leer</a>
+    <h1><?= $entrada2->getTitulo() ?></h1>
+    <a href="entrada.php?id=entrada02">Leer</a>
 </body>
 </html>

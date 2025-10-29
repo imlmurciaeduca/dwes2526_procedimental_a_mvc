@@ -3,6 +3,12 @@ Esta versión incluye conceptos básicos de Programación Orientada a Objetos
 
 Además, ¡ya tenemos persistencia! Salve a los ficheros JSON
 
+Actualmente cuenta con 2 recursos:
+    - index.php
+    - entrada.php?id=
+
+El id puede ser "entrada01" o "entrada02"
+
 # Despliegue
 Si estás con un sistema operativo de verdad, abre tu terminal, copia y pega:
 
