@@ -1,8 +1,9 @@
 <?php
-    require_once 'Entrada.php';
+    require_once 'EntradaController.php';
 
     $id = $_GET['id'];
-    $entrada = Entrada::find($id . '.json');
+    $controller = new EntradaController();
+    $entrada = $controller->getEntrada($id . '.json');
 ?>
 
 <!DOCTYPE html>

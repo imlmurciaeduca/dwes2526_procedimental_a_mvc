@@ -1,5 +1,7 @@
 # Blog
-Esta versión incluye conceptos básicos de Programación Orientada a Objetos
+Esta versión incluye conceptos básicos de Programación Orientada a Objetos.
+
+La lógica relacionada con el modelo se ha refactorizado a su controlador correspondiente
 
 Además, ¡ya tenemos persistencia! Salve a los ficheros JSON. Gracias al formulario y la generación dinámica de HTML con PHP podemos tener un blog sencillito.
 

@@ -1,11 +1,8 @@
 <?php
-    require_once 'Entrada.php';
+    require_once 'EntradaController.php';
 
-    $entradas = glob('*.json');
-    $entradasObj = [];
-    foreach ($entradas as $archivo) {
-        $entradasObj[basename($archivo, '.json')] = Entrada::find($archivo);
-    }
+    $controller = new EntradaController();
+    $entradasObj = $controller->getAllEntradas();
 ?>
 
 <!DOCTYPE html>

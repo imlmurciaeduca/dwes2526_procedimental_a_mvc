@@ -1,12 +1,12 @@
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        require_once 'Entrada.php';
+        require_once 'EntradaController.php';
 
         $titulo = $_POST['titulo'];
         $contenido = $_POST['contenido'];
 
-        $entrada = new Entrada($titulo, $contenido);
-        $entrada->save();
+        $controller = new EntradaController();
+        $controller->guardarEntrada($titulo, $contenido);
         header('Location: index.php');
         exit();
     }
