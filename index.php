@@ -1,8 +1,11 @@
 <?php
     require_once 'Entrada.php';
 
-    $entrada1 = Entrada::find('entrada01.json');
-    $entrada2 = Entrada::find('entrada02.json');
+    $entradas = glob('*.json');
+    $entradasObj = [];
+    foreach ($entradas as $archivo) {
+        $entradasObj[basename($archivo, '.json')] = Entrada::find($archivo);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -14,9 +17,9 @@
 </head>
 <body>
     <p><a href="crear_entrada.php">Crear nueva entrada</a></p>
-    <h1><?= $entrada1->getTitulo() ?></h1>
-    <a href="entrada.php?id=entrada01">Leer</a>
-    <h1><?= $entrada2->getTitulo() ?></h1>
-    <a href="entrada.php?id=entrada02">Leer</a>
+    <?php foreach ($entradasObj as $archivo => $entrada) : ?>
+        <h1><?= $entrada->getTitulo() ?></h1>
+        <a href="entrada.php?id=<?= $archivo ?>">Leer</a>
+    <?php endforeach; ?>
 </body>
 </html>
