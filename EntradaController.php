@@ -23,7 +23,7 @@
 
         public function mostrarEntradas() {
             $entradasObj = $this->getAllEntradas();
-            require 'index.php';
+            require 'listado.php';
         }
 
         public function mostrarEntrada($id) {
