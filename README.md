@@ -3,12 +3,13 @@ Esta versión incluye conceptos básicos de Programación Orientada a Objetos
 
 Además, ¡ya tenemos persistencia! Salve a los ficheros JSON
 
-Actualmente cuenta con 2 recursos:
+Actualmente cuenta con 3 recursos:
 
-- index.php
-- entrada.php?id=
+- index.php: listado de títulos de entradas
+- entrada.php: muestra una entrada individual
+  - Recibe parámetro "id" por GET
 
-El id puede ser "entrada01" o "entrada02"
+- crear_entrada.php: permite crear nuevas entradas
 
 # Despliegue
 Si estás con un sistema operativo de verdad, abre tu terminal, copia y pega:
