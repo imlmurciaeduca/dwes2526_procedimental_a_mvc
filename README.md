@@ -15,6 +15,8 @@ Actualmente cuenta con 3 recursos:
 Las vistas ahora son vistas "tontas", pero ya tenemos el Front Controller que trabaja con todas las rutas posibles de la aplicación y redirige a las vistas con los datos que necesitan.
 
 Refactorizado el código, debería verse tal que así:
+
+```
 . dwes2526_procedimental_a_mvc
 ├── controllers
 │   └── EntradaController.php
@@ -30,6 +32,9 @@ Refactorizado el código, debería verse tal que así:
 │   └── listado.php
 ├── index.php
 └── README.md
+```
+
+
 
 # Despliegue
 Si estás con un sistema operativo de verdad, abre tu terminal, copia y pega:
