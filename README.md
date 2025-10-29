@@ -1,14 +1,13 @@
 # Blog
 Esta versión incluye conceptos básicos de Programación Orientada a Objetos
 
-Además, ¡ya tenemos persistencia! Salve a los ficheros JSON
+Además, ¡ya tenemos persistencia! Salve a los ficheros JSON. Gracias al formulario y la generación dinámica de HTML con PHP podemos tener un blog sencillito.
 
 Actualmente cuenta con 3 recursos:
 
 - index.php: listado de títulos de entradas
 - entrada.php: muestra una entrada individual
   - Recibe parámetro "id" por GET
-
 - crear_entrada.php: permite crear nuevas entradas
 
 # Despliegue
