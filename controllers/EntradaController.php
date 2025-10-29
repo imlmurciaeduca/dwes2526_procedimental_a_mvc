@@ -4,6 +4,19 @@
 
     class EntradaController {
 
+        private static $instance = null;
+
+        private function __construct(){
+            # Se queda vacío porque no necesitamos inicializar nada
+        }
+
+        public static function getInstance(){
+            if (self::$instance === null) {
+                self::$instance = new EntradaController();
+            }
+            return self::$instance;
+        }
+
         public function getAllEntradas(){
             $entradas = glob(__DIR__ . '/../data/*.json');
             $entradasObj = [];
@@ -25,7 +38,7 @@
         public function mostrarEntradas() {
             $entradasObj = $this->getAllEntradas();
 
-            $user_controller = new PerfilUsuarioController();
+            $user_controller = PerfilUsuarioController::getInstance();
             $perfil_usuario = $user_controller->getPerfil('Ignacio');
 
             require __DIR__ . '/../views/listado.php';

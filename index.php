@@ -1,7 +1,7 @@
 <?php
 
     require_once 'controllers/EntradaController.php';
-    $controller = new EntradaController();
+    $controller = EntradaController::getInstance();
 
     $action = $_GET['action'] ?? 'mostrarEntradas';
     

@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__ . '/controllers/PerfilUsuarioController.php';
-    $controller = new PerfilUsuarioController();
+    $controller = PerfilUsuarioController::getInstance();
 
     $action = $_GET['action'] ?? 'mostrarPerfil';
 
