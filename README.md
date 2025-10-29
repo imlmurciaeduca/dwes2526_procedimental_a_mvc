@@ -5,12 +5,14 @@ La lógica relacionada con el modelo se ha refactorizado a su controlador corres
 
 Además, ¡ya tenemos persistencia! Salve a los ficheros JSON. Gracias al formulario y la generación dinámica de HTML con PHP podemos tener un blog sencillito.
 
-Actualmente cuenta con 3 recursos:
+Actualmente cuenta con 2 Front Controller:
 
-- index.php: listado de títulos de entradas
-- entrada.php: muestra una entrada individual
-  - Recibe parámetro "id" por GET
-- crear_entrada.php: permite crear nuevas entradas
+- index.php: FrontController de entradas
+  - action=mostrarEntradas: muestra todas las entradas
+  - action=mostrarEntrada: muestra una entrada individual
+    - Recibe parámetro "id" por GET
+  - action=crearEntrada: permite crear nuevas entradas
+- user.php: FrontController de perfiles de usuario
 
 Las vistas ahora son vistas "tontas", pero ya tenemos el Front Controller que trabaja con todas las rutas posibles de la aplicación y redirige a las vistas con los datos que necesitan.
 
@@ -19,17 +21,19 @@ Refactorizado el código, debería verse tal que así:
 ```
 . dwes2526_procedimental_a_mvc
 ├── controllers
-│   └── EntradaController.php
+│   ├── EntradaController.php
+│   └── PerfilUsuarioController
 ├── data
 │   ├── entrada01.json
 │   └── entrada02.json
 ├── model
-│   └── Entrada.php
+│   ├── Entrada.php
+│   └── PerfilUsuario.php
 ├── views
-│   ├── crear-entrada.php
+│   ├── crear_entrada.php
 │   ├── entrada.php
-│   ├── listado-con-contenido.php
-│   └── listado.php
+│   ├── listado.php
+│   └── perfil.php
 ├── index.php
 └── README.md
 ```
