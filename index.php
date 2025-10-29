@@ -1,12 +1,8 @@
 <?php
     require_once 'Entrada.php';
 
-    $entrada = new Entrada(
-        "Mi primera entrada en este blog",
-        "Este es el contenido de mi primera entrada. Lo he definido
-        directamente como una instancia de una clase, pero seguimos sin
-        tener BBDD."
-    );
+    $data = json_decode(file_get_contents('entrada01.json'), true);
+    $entrada = new Entrada($data['titulo'], $data['contenido']);
 ?>
 
 <!DOCTYPE html>
