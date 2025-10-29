@@ -1,5 +1,5 @@
 # Blog
-Esta es la versión más básica de nuestro blog. Es completamente procedimental y no persiste los datos
+Esta versión incluye conceptos básicos de Programación Orientada a Objetos
 
 # Despliegue
 Si estás con un sistema operativo de verdad, abre tu terminal, copia y pega:

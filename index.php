@@ -1,10 +1,12 @@
-<?php 
-	// index.php
-    $entrada = [
-        "titulo" => "Mi primera entrada en este blog",
-        "contenido" => "Este es el contenido de mi primera entrada. Lo he definido
-        directamente como un un array porque el timing nos ha impedido ver POO y BBDD."
-    ]
+<?php
+    require_once 'Entrada.php';
+
+    $entrada = new Entrada(
+        "Mi primera entrada en este blog",
+        "Este es el contenido de mi primera entrada. Lo he definido
+        directamente como una instancia de una clase, pero seguimos sin
+        tener BBDD."
+    );
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +17,7 @@
     <title>Blog</title>
 </head>
 <body>
-    <h1><?= $entrada["titulo"] ?></h1>
-    <p><?= $entrada["contenido"] ?></p>
+    <h1><?= $entrada->getTitulo() ?></h1>
+    <p><?= $entrada->getContenido() ?></p>
 </body>
 </html>
