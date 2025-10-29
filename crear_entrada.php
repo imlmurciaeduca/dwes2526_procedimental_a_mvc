@@ -1,16 +1,3 @@
-<?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        require_once 'EntradaController.php';
-
-        $titulo = $_POST['titulo'];
-        $contenido = $_POST['contenido'];
-
-        $controller = new EntradaController();
-        $controller->guardarEntrada($titulo, $contenido);
-        header('Location: index.php');
-        exit();
-    }
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,7 +7,7 @@
 </head>
 <body>
     <h1>Crear Nueva Entrada</h1>
-    <form method="POST">
+    <form method="POST" action="index.php?action=guardarEntrada">
         <label for="titulo">Título:</label>
         <input type="text" id="titulo" name="titulo" required>
         <br>

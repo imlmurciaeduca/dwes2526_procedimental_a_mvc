@@ -12,7 +12,7 @@ Actualmente cuenta con 3 recursos:
   - Recibe parámetro "id" por GET
 - crear_entrada.php: permite crear nuevas entradas
 
-Las vistas ahora son vistas "tontas", vamos a necesitar un Front Controller para arreglar este desaguisao... Pongo por aquí un #TODO que espero que lea alguien...
+Las vistas ahora son vistas "tontas", pero ya tenemos el Front Controller que trabaja con todas las rutas posibles de la aplicación y redirige a las vistas con los datos que necesitan. Ya estamos casi ahí
 
 # Despliegue
 Si estás con un sistema operativo de verdad, abre tu terminal, copia y pega:

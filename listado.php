@@ -6,10 +6,10 @@
     <title>Blog</title>
 </head>
 <body>
-    <p><a href="crear_entrada.php">Crear nueva entrada</a></p>
+    <p><a href="index.php?action=crearEntrada">Crear nueva entrada</a></p>
     <?php foreach ($entradasObj as $archivo => $entrada) : ?>
         <h1><?= $entrada->getTitulo() ?></h1>
-        <a href="entrada.php?id=<?= $archivo ?>">Leer</a>
+        <a href="index.php?action=mostrarEntrada&id=<?= $archivo ?>">Leer</a>
     <?php endforeach; ?>
 </body>
 </html>

@@ -13,7 +13,7 @@
         }
 
         public function getEntrada($archivo){
-            return Entrada::find($archivo);
+            return Entrada::find($archivo . '.json');
         }
 
         public function guardarEntrada($titulo, $contenido) {
@@ -32,7 +32,7 @@
         }
 
         public function crearEntrada() {
-            require 'crear-entrada.php';
+            require 'crear_entrada.php';
         }
     }
 ?>
