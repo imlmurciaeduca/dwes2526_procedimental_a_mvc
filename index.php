@@ -1,8 +1,7 @@
 <?php
     require_once 'Entrada.php';
 
-    $data = json_decode(file_get_contents('entrada01.json'), true);
-    $entrada = new Entrada($data['titulo'], $data['contenido']);
+    $entrada = Entrada::find('entrada01.json');
 ?>
 
 <!DOCTYPE html>
