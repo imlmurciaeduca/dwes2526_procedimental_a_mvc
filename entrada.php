@@ -1,11 +1,3 @@
-<?php
-    require_once 'EntradaController.php';
-
-    $id = $_GET['id'];
-    $controller = new EntradaController();
-    $entrada = $controller->getEntrada($id . '.json');
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>

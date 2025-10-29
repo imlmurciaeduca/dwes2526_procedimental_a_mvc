@@ -20,5 +20,19 @@
             $entrada = new Entrada($titulo, $contenido);
             $entrada->save();
         }
+
+        public function mostrarEntradas() {
+            $entradasObj = $this->getAllEntradas();
+            require 'index.php';
+        }
+
+        public function mostrarEntrada($id) {
+            $entrada = $this->getEntrada($id);
+            require 'entrada.php';
+        }
+
+        public function crearEntrada() {
+            require 'crear-entrada.php';
+        }
     }
 ?>

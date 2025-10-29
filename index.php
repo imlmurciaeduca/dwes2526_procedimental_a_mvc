@@ -1,10 +1,3 @@
-<?php
-    require_once 'EntradaController.php';
-
-    $controller = new EntradaController();
-    $entradasObj = $controller->getAllEntradas();
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
