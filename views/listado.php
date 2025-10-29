@@ -6,6 +6,7 @@
     <title>Blog</title>
 </head>
 <body>
+    <h3><?= $perfil_usuario->getNombre() ?> (<?= $perfil_usuario->getEmail() ?>)</h3>
     <p><a href="index.php?action=crearEntrada">Crear nueva entrada</a></p>
     <?php foreach ($entradasObj as $archivo => $entrada) : ?>
         <h1><?= $entrada->getTitulo() ?></h1>

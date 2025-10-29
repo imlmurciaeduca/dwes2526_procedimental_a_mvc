@@ -38,8 +38,6 @@ Refactorizado el código, debería verse tal que así:
 └── README.md
 ```
 
-
-
 # Despliegue
 Si estás con un sistema operativo de verdad, abre tu terminal, copia y pega:
 

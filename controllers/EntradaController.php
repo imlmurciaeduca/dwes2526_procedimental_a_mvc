@@ -1,5 +1,6 @@
 <?php
     require_once __DIR__ . '/../model/Entrada.php';
+    require_once 'PerfilUsuarioController.php';
 
     class EntradaController {
 
@@ -23,6 +24,10 @@
 
         public function mostrarEntradas() {
             $entradasObj = $this->getAllEntradas();
+
+            $user_controller = new PerfilUsuarioController();
+            $perfil_usuario = $user_controller->getPerfil('Ignacio');
+
             require __DIR__ . '/../views/listado.php';
         }
 
